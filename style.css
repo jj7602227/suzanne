@@ -14,25 +14,150 @@ html, body {
  background: #7fdbda;
  display: flex;
  justify-content: space-around;
- align-items: center;
+ align-items: flex-end;
 }
 .box {
  width: 170px;
  height: 170px;
 }
-.box1 {
+
+/* .boxs div:nth-child(3)
+寫父層class名稱空格代表 裡面的div 的
+Boxs裡面的第3個div */
+
+.boxs div:nth-child(1) {
   background: #ffc7c7; 
+  box-shadow: 0px 0px 40px #ffc7c7;
+  border: 1px #ffc7c7;
+  background: transparent;
 }
-.box2 {
-  background: #8d93ab; 
+.boxs div:nth-child(2) {
+  background: #8d93ab;  
+  box-shadow: 0px 0px 40px #8d93ab;
+  border: 1px #8d93ab;
+  background: transparent;
 }
-.box3 {
-  background: #c3aed6; 
+.boxs div:nth-child(3) {
+  background: #c3aed6;  
+  box-shadow: 0px 0px 40px #c3aed6;
+  border: 1px #c3aed6;
+  background: transparent;
 }
-.box4 {
+.boxs div:nth-child(4) {
   background: #6f4a8e; 
+  box-shadow: 0px 0px 40px #6f4a8e;
+  border: 1px #6f4a8e;
+  background: transparent;
 }
-.box5 {
+.boxs div:nth-child(5) {
   background: #0f3460; 
   border-radius: 170px;
+  box-shadow: 0px 0px 40px #0f3460;
+  border: 1px #0f3460;
+  background: transparent;
+  
+}
+
+.boxs div:nth-child(1).active {
+ animation: lala-1 2s infinite;
+}
+
+.boxs div:nth-child(2).active {
+ animation: lala-2 2s infinite ease-in-out;
+}
+
+.boxs div:nth-child(3).active {
+  animation: lala-3 2s infinite;
+}
+
+.boxs div:nth-child(4).active{
+  animation: lala-4 2s infinite ease-in-out;
+}
+
+.boxs div:nth-child(5).active{
+  animation: lala-5 3s infinite ease-in-out;
+}
+
+@keyframes lala-1 {
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  
+  50% {
+   transform: translateY(-100px);
+   background: #ffc7c7;
+  }
+}
+@keyframes lala-2 {
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  30%,80% {
+    transform: translateY(-150px) rotate(0deg);
+    background: transparent;
+  }
+  
+  50% {
+   transform: translateY(-150px) rotate(180deg);
+   background: #8d93ab;
+  }
+}
+@keyframes lala-3 {
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  
+  50% {
+   transform: translateY(-250px) scale(0.5);
+   border-radius: 50%;
+   background: #c3aed6;
+  }
+
+}
+@keyframes lala-4 {
+  0%, 100%{
+    transform-origin: 0% 100%;
+    transform: skew(40deg); 
+  }
+  
+  50% {
+   transform: skew(-40deg);
+   
+   
+  }
+}
+@keyframes lala-5 {
+  0%{
+    transform: translateY(-280px);
+    animation-timing-function: ease-in;
+  }
+   15%{
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+   30%{
+    transform: translateY(-250px);
+    animation-timing-function: ease-in;
+  }
+   45%{
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+   55%{
+    transform: translateY(-160px);
+    animation-timing-function: ease-in;
+  }
+   60%{
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+   85%{
+    transform: translateY(-100px);
+    animation-timing-function: ease-in;
+  }
+   100%{
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  
 }
